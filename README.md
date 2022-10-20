@@ -1,4 +1,5 @@
 # ALX Software Engineering Printf Team Project
+
 This team project is a custom made printf function for the C programming language called \_printf. It has been optimized to take various inputs and optional arguments based exactly on how the standard library function printf works.
 
 ## **Synopsis**
@@ -14,7 +15,6 @@ Printf or print function in C takes a formatting string and a couple of optional
 
 Printf and scanf take multiple arguments and these functions are called variable length arguments function or vararg function. For instance, in printf, a user supplies a string and input arguments, and printf creates an internal buffer for constructing an output string.Now printf iterates through each characters of the user string and copies the character to the output string. Printf only stops at “%”. “%” means there is an argument to convert. Arguments are in the form of char, int, long, float double, or string. It converts it to string and appends it to the output buffer. If the argument is a string then it does a string copy. Finally, printf may reach the end of the user string and it copies the entire buffer to the stdout file.
 
-
 This function **\_printf()** writes output to stdout, the standard output stream with the format and options without making use of any of the standard library files. It was written to use a local buffer of 1024 bytes when printing although it can print larger sets of data.
 
 The \_printf() function returns the total number of characters printed to the stdout(excluding the null byte at the end of strings) after a successful execution.
@@ -27,7 +27,7 @@ This means that it has one mandatory format argument, and an extra number of arg
 
 **Format of the format string**
 
-The format string is a character string starting and ending with double quotes. The format string is composed of zero or more directives; ordinary characters (not %), and conversion specifications, each of which results in fetching zero or more subsequent arguments. 
+The format string is a character string starting and ending with double quotes. The format string is composed of zero or more directives; ordinary characters (not %), and conversion specifications, each of which results in fetching zero or more subsequent arguments.
 
 Each conversion specification is introduced by the character **%** and ends with a **conversion specifier**. In between there may be (in this order):
 
@@ -57,7 +57,7 @@ An  optional decimal digit string (with nonzero first digit) specifying a minimu
 
 or
 
-	printf("%*d", width, num);
+    printf("%*d", width, num);
 
 **The precision**
 
@@ -91,42 +91,53 @@ or
 |**r**|The  argument received is expected to be a pointer type char * to an array of characters.  Characters from this array are printed in reverse order up to (but not including) a null byte  ('\0').  |
 |**R**|The argument received is expected to be a pointer type char * to an array of characters.  Characters from this array  are  encoded  to  ROT13  and printed in order up to (but not including a null byte  ('\0').  |
 
-## **Tasks**
-
-0. I'm not going anywhere. You can print that wherever you want to. I'm here and I'm a Spur for life 
+#### Files contained in this repository
 
 
-1. Education is when you read the fine print. Experience is what you get if you don't 
+------------
 
-2. With a face like mine, I do better in print
-
-3. What one has not experienced, one will never understand in print
-4. Nothing in fine print is ever good news
-
-5. My weakness is wearing too much leopard print
-
-6. How is the world ruled and led to war? Diplomats lie to journalists and believe these lies when they see them in print
-
-7. The big print gives and the small print takes away
-
-8. Sarcasm is lost in print
-
-
-9. Print some money and give it to us for the rain forests
-
-10. The negative is the equivalent of the composer's score, and the print the performance
-
-11. It's depressing when you're still around and your albums are out of print
-
-12. Every time that I wanted to give up, if I saw an interesting textile, print what ever, suddenly I would see a collection
-
-13. Print is the sharpest and the strongest weapon of our party
-
-14. The flood of print has turned reading into a process of gulping rather than savoring
-
-15. *
+|Name                |Information                        |Relevant Files                         |
+|----------------|-------------------------------|-----------------------------|
+|`man_3_printf`|Man page of the _printf() function.| `None` |
+|`main.h`	| Header file with the data type struct, standard libraries and custom prototypes.| `*.c compilation` |
+|`_printf.c`|Main printf function file. Calls other functions.|`printf_(name of var).c file` |
+|`printf_37.c`|Contains percentage print function.|`None` |
+|`printf_int.c` | Contains decimal and integer functions. | `None` | 
+`printf_char.c` | Custom function for char data type. | `None`
+|`printf_sting.c` | Function that calls string type variable. | `None` |
+|`printf_bin.c` | Function that gets the binary | `None` |
+`printf_oct.c` | Functions that returns octal number. | `None` |
+`printf_hex.c` | Calls hexadecimal numbers (lowercase). | `None` | 
+`printf_HEX.c` | Calls hexadecimal numbers (Uppercase). | `None` |
+`printf_unsigned.c` | Returns an unisgined data type. | `None` |
+`printf_hex_aux.c` | Auxiliar function for hexadecimal specific functions (lowercase). | `printf_exclusive_string.c` | 
+`printf_HEX_aux.c` | Auxiliar function hexadecimal specific functions (Uppercase). | `printf_p.c` |
+`printf_exclusive_string.c` | Returns a string and non readable characters are printed in hexadecimal numbers (Lowercase). | `printf_hex_aux.c` |
+`printf_srev.c` | Returns a string in reverse. | `None` |
+`printf_rot13.c` | Returns a string in Rot13. | `None` |
+`printf_str.c` | Auxiliar functions such as strlen and strcpy. | `None` |
+`_putchar.c` | Custom putchar function. | `None` |
 
 
+------------
 
-## **Author**
+
+#### Tasks required for this project
+
+
+------------
+
+0. ###### I am not going anywhere. You can print that wherever you want to. I'm here and I am a Spur for life1.  I am not going anywhere. You can print that wherever you want to. I'm here and I am a Spur for life. 
+Write a function that produces output according to a format.
+Handle the following conversion specifiers:
+- c
+- s
+- %
+
+1. ###### Education is when you read the fine print. Experience is what you get if you dont
+Handle the following conversion specifiers:
+- d
+- i
+
+## **Author** &copy;
 Dennis Nderitu, Murugi Nthakanio
