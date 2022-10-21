@@ -3,7 +3,7 @@
 .B _printf
 - formatted output conversion
 .SH SYNOPSIS
-.B #include \(dqholberton.h\(dq
+.B #include \(dqmain.h\(dq
 .sp
 .B int _printf(const char *
 .I format
